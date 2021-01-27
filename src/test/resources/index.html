@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="login" type="text" placeholder="login"/>
+    <input id="password" type="password" placeholder="password">
+    <input type="submit" >
+
+</form>
+<div></div>
+<script>
+        document.forms[0].addEventListener("submit",(e)=>{
+            const div = document.querySelector("div");
+            div.innerHTML = `
+            <p>Login: ${document.getElementById("login").value}<p/>
+            <p>Password: ${document.getElementById("password").value}<p/>
+            `;
+            e.preventDefault();
+
+        });
+    </script>
+</body>
+</html>
